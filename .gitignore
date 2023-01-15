@@ -1,0 +1,11 @@
+.vscode
+/bin
+/lib
+
+.idea
+/META-INF
+/out
+/target
+
+/resources/arch.zip
+/resources/config.proporties
