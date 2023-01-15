@@ -25,7 +25,7 @@ The program will be written in several steps, where at each step, the program wi
     - The size of ALL databases divided by 3 = a number that should be LESS than the size of the archive with 1c && the size of ALL databases (SQL) should be greater than the size of the archive
 
   - for Shara / Profiles:
-    - make a check on the size of the archive, based on (for Shara / Profiles):
+    - make a check on the size of the archive, based on (for Shara / Profiles):<br>
     `min = nominal - (nominal * 20 / 100) // 119 - 24 = 95`<br>
     `max = nominal + (nominal * 20 / 100) // 119 + 24 = 143`<br>
     `nominal = Size of Shara in its original form // for example 119 GB`<br>
