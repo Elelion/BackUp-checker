@@ -26,15 +26,10 @@ The program will be written in several steps, where at each step, the program wi
 
   - for Shara / Profiles:
     - make a check on the size of the archive, based on (for Shara / Profiles):
-    <br>
-    
-    `min = nominal - (nominal * 20 / 100) // 119 - 24 = 95`
-  
-    `max = nominal + (nominal * 20 / 100) // 119 + 24 = 143`
-  
-    `nominal = Size of Shara in its original form // for example 119 GB`
-  
-    `archive = Archive size // for example 100 GB`
+    `min = nominal - (nominal * 20 / 100) // 119 - 24 = 95`<br>
+    `max = nominal + (nominal * 20 / 100) // 119 + 24 = 143`<br>
+    `nominal = Size of Shara in its original form // for example 119 GB`<br>
+    `archive = Archive size // for example 100 GB`<br>
   
     - Condition:<br>
     `Archive > main && Archive < max && archive < nominal`
