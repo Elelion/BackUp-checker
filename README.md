@@ -27,6 +27,8 @@ The program will be written in several steps, where at each step, the program wi
   - for Shara / Profiles:
     - make a check on the size of the archive, based on (for Shara / Profiles):
     <br>
+    `test`
+    <br>
     `min = nominal - (nominal * 20 / 100) // 119 - 24 = 95`<br>
     `max = nominal + (nominal * 20 / 100) // 119 + 24 = 143`<br>
     `nominal = Size of Shara in its original form // for example 119 GB`<br>
@@ -38,5 +40,3 @@ The program will be written in several steps, where at each step, the program wi
 ### Step-4:
   - checks archives for old age, deletes old archives, leaves new ones (the algorithm for deleting old ones is to think over)
   - after deletion, sends a letter, a list of which archives remained and which were deleted.
-
-`test`
