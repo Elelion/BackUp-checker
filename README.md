@@ -27,7 +27,7 @@ The program will be written in several steps, where at each step, the program wi
   - for Shara / Profiles:
     - make a check on the size of the archive, based on (for Shara / Profiles):
     <br>
-    `test`
+    
     `min = nominal - (nominal * 20 / 100) // 119 - 24 = 95`
   
     `max = nominal + (nominal * 20 / 100) // 119 + 24 = 143`
