@@ -13,10 +13,13 @@ public class SendEmail {
     private String userPassword;
     private Properties props = new Properties();
 
-    public SendEmail(String mailSender, String mailSubject, String mailText) throws IOException {
+    /**
+     * sends an email according to the specified parameters
+     */
+    public SendEmail(String mailRecipient, String mailSubject, String mailText) throws IOException {
         loadUserDataFromConfig();
         configureProps();
-        sendEmail(mailSender, mailSubject, mailText);
+        sendEmail(mailRecipient, mailSubject, mailText);
     }
 
     /**/
@@ -72,7 +75,7 @@ public class SendEmail {
      * we take the data from our session and send an email according
      * to the receiving parameters of the method
      */
-    private void sendEmail(String mailSender, String mailSubject, String mailText) {
+    private void sendEmail(String mailRecipient, String mailSubject, String mailText) {
         Session session = getSession();
 
         try {
@@ -81,7 +84,7 @@ public class SendEmail {
             message.setFrom(new InternetAddress("no-reply@gmail.com"));
             message.setRecipients(
                 Message.RecipientType.TO,
-                InternetAddress.parse(mailSender)
+                InternetAddress.parse(mailRecipient)
             );
             message.setSubject(mailSubject);
             message.setText(mailText);
