@@ -7,8 +7,6 @@ import javax.mail.internet.*;
 
 
 public class SendEmail {
-
-    private final String PATH_PROJECT = System.getProperty("user.dir");
     private String userName;
     private String userPassword;
     private Properties props = new Properties();
@@ -31,16 +29,10 @@ public class SendEmail {
      * https://support.google.com/accounts/answer/185833?visit_id=638093045649618309-3914306815&p=InvalidSecondFactor&rd=1
      */
     private void loadUserDataFromConfig() throws IOException {
-        String pathDir = "resources";
-        String filename = "config.proporties";
-        String fullPathAndFile = PATH_PROJECT + File.separator + pathDir + File.separator + filename;
+        LoadConfig loadConfig = new LoadConfig();
 
-        FileInputStream fileInputStream = new FileInputStream(fullPathAndFile);
-        Properties properties = new Properties();
-        properties.load(fileInputStream);
-
-        userName = properties.getProperty("mail.user");
-        userPassword = properties.getProperty("mail.password");
+        userName = loadConfig.takeProperties("mail.user");
+        userPassword = loadConfig.takeProperties("mail.password");
     }
 
     /**

@@ -24,8 +24,8 @@ public class FileCheck {
      * checks whether there is a file or not, and whether it satisfies
      * our conditions or not
      */
-    public boolean getFileStatus() {
-        if (getFileSize() >= 999) {
+    public boolean getCheckFileStatus() {
+        if (getFileSize() <= 999) {
             errorCodePrint(ERR_FILE_SIZE);
             return false;
         }
